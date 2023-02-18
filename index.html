@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="bg-sky-100 rounded-sm mx-10 my-8 px-5 py-3">
@@ -20,6 +21,7 @@
     </div>
     </header>
     <main>
+        <section>
         <div class="grid grid-cols-4 gap-4 mx-auto text-black p-6 text-center">
             <!--Triangle-->
             <div id="random" class="border-2 p-8 rounded-md ">
@@ -35,7 +37,7 @@
                 <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
             </div>
             <!--Rectangle-->
-            <div class="border-2 p-8 rounded-md ">
+            <div id="random-2" class="border-2 p-8 rounded-md ">
                 <img src="images/rectangle.png" class="mb-4 mx-auto">
                 <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
                 <p class="text-md">Area (A) = w X l</p>
@@ -87,6 +89,9 @@
             <br>
             <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
         </div>
+    </section>
     </main>
+    <script src="js/calculation.js"></script>
+    <script src="js/random-color.js"></script>
 </body>
 </html>
