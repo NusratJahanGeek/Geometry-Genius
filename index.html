@@ -29,12 +29,12 @@
                 <h4 class="text-2xl font-medium mb-2">Triangle</h4>
                 <p class="text-md">Area (A) = 0.5 X b X h</p>
                 <div class="flex gap-2 mt-2">
-                    <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="b">
+                    <input id="user-input-b" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="b">
                 <p>cm</p>
-                <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="h">
+                <input id="user-input-h" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="h">
                 <p>cm</p>
                 </div>
-                <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                <button id="triangle-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
             </div>
             <!--Rectangle-->
             <div id="random-2" class="border-2 p-8 rounded-md ">
@@ -42,12 +42,12 @@
                 <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
                 <p class="text-md">Area (A) = w X l</p>
                 <div class="flex gap-2 mt-2">
-                    <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="w">
+                    <input id="user-input-w" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="w">
                 <p>cm</p>
-                <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="l">
+                <input id="user-input-l" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="l">
                 <p>cm</p>
                 </div>
-                <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                <button id="rectangle-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
             </div>
             <!-- Parallelogram -->
             <div class="border-2 p-8 rounded-md ">
@@ -59,8 +59,21 @@
                 <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
             </div>
         <!-- Area Calculation -->
-            <div class="border-2 p-8 rounded-md ">
-                <h4 class="text-2xl font-medium mb-2 underline">Area Calculation</h4>
+            <div id="area-calculation-container" class="border-2 p-8 rounded-md">
+                <h4 class="text-2xl font-medium mb-4 underline">Area Calculation</h4>
+                <ol class="list-decimal text-left">
+                    <li>Triangle &nbsp; &nbsp; <span id="triangle-value">12</span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <br>
+                    <li>Rectangle &nbsp; &nbsp; <span id="rectangle-value">125.6</span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <br>
+                    <li>Parallelogram &nbsp; 120cm<sup>2</sup> &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <br>
+                    <li>Rhombus &nbsp; &nbsp; 64cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <br>
+                    <li>Pentagon &nbsp; &nbsp; 30cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <br>
+                    <li>Ellipse &nbsp; &nbsp; 125.60cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                </ol>
             </div>
         <!-- Rhombus -->
         <div class="border-2 p-8 rounded-md ">
@@ -91,7 +104,7 @@
         </div>
     </section>
     </main>
-    <script src="js/calculation.js"></script>
     <script src="js/random-color.js"></script>
+    <script src="js/calculation.js"></script>
 </body>
 </html>

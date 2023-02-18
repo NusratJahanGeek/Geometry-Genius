@@ -7,6 +7,7 @@ function randomColor() {
   } 
   const randomColorEffect = document.getElementById('random');
   const randomColorEffect2 = document.getElementById('random-2');
+  
   randomColorEffect.addEventListener('mouseover', function(){
     randomColorEffect.style.backgroundColor = randomColor();
   });
