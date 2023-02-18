@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-sky-100 rounded-sm mx-10 my-8 px-5 py-3">
+    <div class="flex justify-between items-center">
+        <div>
+        <h1 class="text-3xl font-bold">Interactive</h1>
+        <p class="text-lg">Geometry Genius</p>
+        </div>
+        <div>
+            <button class="bg-sky-600  hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Blog</button>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="grid grid-cols-4 gap-4 mx-auto text-black p-6 text-center">
+            <!--Triangle-->
+            <div id="random" class="border-2 p-8 rounded-md ">
+                <img src="images/triangle.png" class="mb-4 mx-auto">
+                <h4 class="text-2xl font-medium mb-2">Triangle</h4>
+                <p class="text-md">Area (A) = 0.5 X b X h</p>
+                <div class="flex gap-2 mt-2">
+                    <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="b">
+                <p>cm</p>
+                <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="h">
+                <p>cm</p>
+                </div>
+                <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+            </div>
+            <!--Rectangle-->
+            <div class="border-2 p-8 rounded-md ">
+                <img src="images/rectangle.png" class="mb-4 mx-auto">
+                <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
+                <p class="text-md">Area (A) = w X l</p>
+                <div class="flex gap-2 mt-2">
+                    <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="w">
+                <p>cm</p>
+                <input class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="l">
+                <p>cm</p>
+                </div>
+                <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+            </div>
+            <!-- Parallelogram -->
+            <div class="border-2 p-8 rounded-md ">
+                <img src="images/parallelogram.png" class="mb-4 mx-auto">
+                <h4 class="text-2xl font-medium mb-2">Parallelogram</h4>
+                <p class="text-md">Area (A) = b X h</p>
+                <p class="mt-2 text-lg">b = 10cm, h = 12cm</p>
+                <br>
+                <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+            </div>
+        <!-- Area Calculation -->
+            <div class="border-2 p-8 rounded-md ">
+                <h4 class="text-2xl font-medium mb-2 underline">Area Calculation</h4>
+            </div>
+        <!-- Rhombus -->
+        <div class="border-2 p-8 rounded-md ">
+            <img src="images/rhombus.png" class="mb-4 mx-auto">
+            <h4 class="text-2xl font-medium mb-2">Rhombus</h4>
+            <p class="text-md">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+            <p class="mt-2 text-lg">d<sub>1</sub>=16cm &nbsp; d<sub>2</sub>=8cm</p>
+            <br>
+            <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+        </div>
+        <!-- Pentagon -->
+        <div class="border-2 p-8 rounded-md ">
+            <img src="images/pentagon.png" class="mb-4 mx-auto">
+            <h4 class="text-2xl font-medium mb-2">Pentagon</h4>
+            <p class="text-md">Area (A) = 0.5 X p X b</p>
+            <p class="mt-2 text-lg">p = 6cm, b = 10cm</p>
+            <br>
+            <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+        </div>
+        <!-- Ellipse -->
+        <div class="border-2 p-8 rounded-md ">
+            <img src="images/ellipse.png" class="mb-4 mx-auto">
+            <h4 class="text-2xl font-medium mb-2">Ellipse</h4>
+            <p class="text-md">Area (A) = &#960;ab</p>
+            <p class="mt-2 text-lg">a=10cm, b=4cm</p>
+            <br>
+            <button class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+        </div>
+    </main>
+</body>
+</html>
