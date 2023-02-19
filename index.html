@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -29,8 +30,12 @@
                 <div id="random" class="randomcolor border-2 p-8 rounded-md ">
                     <img src="images/triangle.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Triangle</h4>
-                    <p class="text-md">Area (A) = 0.5 X <span id="update-b">b</span> X <span id="update-h">h</span></p>
-                    <div class="flex gap-2 mt-2">
+                    <p class="text-md">Area (A) = 0.5 X b X h</p>
+                    <div class="flex justify-center items-center">
+                    <p class="mt-2 text-lg block">b = <span id="update-b">?</span> cm, h = <span id="update-h">?</span> cm</p>
+                    <img src="images/edit.png" id="edit-icon" class="h-6 px-2">
+                    </div>
+                    <div id="edit-field" class="flex gap-2 mt-2">
                         <input id="user-input-b" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
                             name="" id="" placeholder="b">
                         <p>cm</p>
@@ -45,8 +50,12 @@
                 <div id="random-2" class="randomcolor border-2 p-8 rounded-md ">
                     <img src="images/rectangle.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
-                    <p class="text-md">Area (A) = <span id="update-w">w</span> X <span id="update-l">l</span></p>
-                    <div class="flex gap-2 mt-2">
+                    <p class="text-md">Area (A) = w X l</p>
+                    <div class="flex justify-center items-center">
+                    <p class="mt-2 text-lg">w = <span id="update-w">?</span> cm, l = <span id="update-l">?</span> cm</p>
+                    <img src="images/edit.png" id="edit-icon2" class="h-6 px-2">
+                    </div>
+                    <div id="edit-field2" class="flex gap-2 mt-2">
                         <input id="user-input-w" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
                             name="" id="" placeholder="w">
                         <p>cm</p>
@@ -58,47 +67,47 @@
                         class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Parallelogram -->
-                <div class="border-2 p-8 rounded-md ">
+                <div id="random-3"  class="border-2 p-8 rounded-md ">
                     <img src="images/parallelogram.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Parallelogram</h4>
                     <p class="text-md">Area (A) = b X h</p>
-                    <p class="mt-2 text-lg">b = 10cm, h = 12cm</p>
+                    <p class="mt-2 text-lg">b = 10 cm, h = 12 cm</p>
                     <br>
                     <button id="parallelogram-calculate-button"
                         class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Area Calculation -->
-                <div id="area-calculation-container" class="border-2 p-8 rounded-md">
+                <div id="area-calculation-container" class="row-start-7 lg:row-span-3 border-2 p-8 rounded-md">
                     <h4 class="text-2xl font-medium mb-4 underline">Area Calculation</h4>
                     <ol id="list-container" class="list-decimal text-left">
                     </ol>
                 </div>
                 <!-- Rhombus -->
-                <div class="border-2 p-8 rounded-md ">
+                <div id="random-4"  class="border-2 p-8 rounded-md ">
                     <img src="images/rhombus.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Rhombus</h4>
                     <p class="text-md">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
-                    <p class="mt-2 text-lg">d<sub>1</sub>=16cm &nbsp; d<sub>2</sub>=8cm</p>
+                    <p class="mt-2 text-lg">d<sub>1</sub> = 16 cm &nbsp; d<sub>2</sub> = 8 cm</p>
                     <br>
                     <button id="rhombus-calculate-button"
                         class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Pentagon -->
-                <div class="border-2 p-8 rounded-md ">
+                <div id="random-5"  class="border-2 p-8 rounded-md ">
                     <img src="images/pentagon.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Pentagon</h4>
                     <p class="text-md">Area (A) = 0.5 X p X b</p>
-                    <p class="mt-2 text-lg">p = 6cm, b = 10cm</p>
+                    <p class="mt-2 text-lg">p = 6 cm, b = 10 cm</p>
                     <br>
                     <button id="pentagon-calculate-button"
                         class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Ellipse -->
-                <div class="border-2 p-8 rounded-md ">
+                <div id="random-6"  class="border-2 p-8 rounded-md ">
                     <img src="images/ellipse.png" class="mb-4 mx-auto">
                     <h4 class="text-2xl font-medium mb-2">Ellipse</h4>
                     <p class="text-md">Area (A) = &#960;ab</p>
-                    <p class="mt-2 text-lg">a=10cm, b=4cm</p>
+                    <p class="mt-2 text-lg">a = 10 cm, b = 4 cm</p>
                     <br>
                     <button id="ellipse-calculate-button"
                         class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
@@ -108,6 +117,7 @@
     <script src="js/random-color.js"></script>
     <script src="js/area-container.js"></script>
     <script src="js/calculation.js"></script>
+    <script src="js/display.js"></script>
     
 </body>
 
