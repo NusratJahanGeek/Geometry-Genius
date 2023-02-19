@@ -42,3 +42,46 @@ document.getElementById('rectangle-calculate-button').addEventListener('click', 
     setTextElementValueById('update-w', userWidthInput);
     setTextElementValueById('update-l', userHeightInput);
 });
+
+
+document.getElementById('rectangle-calculate-button').addEventListener('click', function () {
+    const userWidthInput = getInputFieldValueById('user-input-w');
+
+    const userHeightInput = getInputFieldValueById('user-input-l');
+
+    const rectangleArea = userWidthInput * userHeightInput;
+
+    const updatedRectangleValue = document.getElementById('rectangle-value');
+    updatedRectangleValue.innerText = rectangleArea;
+
+    setTextElementValueById('update-w', userWidthInput);
+    setTextElementValueById('update-l', userHeightInput);
+});
+
+document.getElementById('parallelogram-calculate-button').addEventListener('click', function () {
+    const parallelogramArea = 10 * 12;
+
+    const updatedParallelogramValue = document.getElementById('parallelogram-value');
+    updatedParallelogramValue.innerText = parallelogramArea;
+});
+
+document.getElementById('rhombus-calculate-button').addEventListener('click', function () {
+    const rhombusArea = 0.5 * 16 * 8;
+
+    const updatedRhombusValue = document.getElementById('rhombus-value');
+    updatedRhombusValue.innerText = rhombusArea;
+});
+
+document.getElementById('pentagon-calculate-button').addEventListener('click', function () {
+    const pentagonArea = 0.5 * 6 * 10;
+
+    const updatedPentagonValue = document.getElementById('pentagon-value');
+    updatedPentagonValue.innerText = pentagonArea;
+});
+
+document.getElementById('ellipse-calculate-button').addEventListener('click', function () {
+    const ellipseArea = 3.14 * 10 * 4;
+
+    const updatedEllipseValue = document.getElementById('ellipse-value');
+    updatedEllipseValue.innerText = ellipseArea.toFixed(2);
+});
