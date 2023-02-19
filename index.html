@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,103 +8,107 @@
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="bg-sky-100 rounded-sm mx-10 my-8 px-5 py-3">
-    <div class="flex justify-between items-center">
-        <div>
-        <h1 class="text-3xl font-bold">Interactive</h1>
-        <p class="text-lg">Geometry Genius</p>
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Interactive</h1>
+                <p class="text-lg">Geometry Genius</p>
+            </div>
+            <div>
+                <button class="bg-sky-600  hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg"><a
+                        href="blog.html">Blog</a></button>
+            </div>
         </div>
-        <div>
-            <button class="bg-sky-600  hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg"><a href="blog.html">Blog</a></button>
-        </div>
-    </div>
     </header>
     <main>
         <section>
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 mx-auto text-black p-6 text-center">
-            <!--Triangle-->
-            <div id="random" class="randomcolor border-2 p-8 rounded-md ">
-                <img src="images/triangle.png" class="mb-4 mx-auto">
-                <h4 class="text-2xl font-medium mb-2">Triangle</h4>
-                <p class="text-md">Area (A) = 0.5 X <span id="update-b">b</span> X <span id="update-h">h</span></p>
-                <div class="flex gap-2 mt-2">
-                    <input id="user-input-b" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="b">
-                <p>cm</p>
-                <input id="user-input-h" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="h">
-                <p>cm</p>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 mx-auto text-black p-6 text-center">
+                <!--Triangle-->
+                <div id="random" class="randomcolor border-2 p-8 rounded-md ">
+                    <img src="images/triangle.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Triangle</h4>
+                    <p class="text-md">Area (A) = 0.5 X <span id="update-b">b</span> X <span id="update-h">h</span></p>
+                    <div class="flex gap-2 mt-2">
+                        <input id="user-input-b" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
+                            name="" id="" placeholder="b">
+                        <p>cm</p>
+                        <input id="user-input-h" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
+                            name="" id="" placeholder="h">
+                        <p>cm</p>
+                    </div>
+                    <button id="triangle-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
-                <button id="triangle-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-            </div>
-            <!--Rectangle-->
-            <div id="random-2" class="randomcolor border-2 p-8 rounded-md ">
-                <img src="images/rectangle.png" class="mb-4 mx-auto">
-                <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
-                <p class="text-md">Area (A) = <span id="update-w">w</span> X <span id="update-l">l</span></p>
-                <div class="flex gap-2 mt-2">
-                    <input id="user-input-w" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="w">
-                <p>cm</p>
-                <input id="user-input-l" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="l">
-                <p>cm</p>
+                <!--Rectangle-->
+                <div id="random-2" class="randomcolor border-2 p-8 rounded-md ">
+                    <img src="images/rectangle.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
+                    <p class="text-md">Area (A) = <span id="update-w">w</span> X <span id="update-l">l</span></p>
+                    <div class="flex gap-2 mt-2">
+                        <input id="user-input-w" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
+                            name="" id="" placeholder="w">
+                        <p>cm</p>
+                        <input id="user-input-l" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number"
+                            name="" id="" placeholder="l">
+                        <p>cm</p>
+                    </div>
+                    <button id="rectangle-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
                 </div>
-                <button id="rectangle-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-            </div>
-            <!-- Parallelogram -->
-            <div class="border-2 p-8 rounded-md ">
-                <img src="images/parallelogram.png" class="mb-4 mx-auto">
-                <h4 class="text-2xl font-medium mb-2">Parallelogram</h4>
-                <p class="text-md">Area (A) = b X h</p>
-                <p class="mt-2 text-lg">b = 10cm, h = 12cm</p>
-                <br>
-                <button id="parallelogram-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-            </div>
-        <!-- Area Calculation -->
-            <div id="area-calculation-container" class="border-2 p-8 rounded-md">
-                <h4 class="text-2xl font-medium mb-4 underline">Area Calculation</h4>
-                <ol class="list-decimal text-left">
-                    <li>Triangle &nbsp; &nbsp; <span id="triangle-value">12</span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                <!-- Parallelogram -->
+                <div class="border-2 p-8 rounded-md ">
+                    <img src="images/parallelogram.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Parallelogram</h4>
+                    <p class="text-md">Area (A) = b X h</p>
+                    <p class="mt-2 text-lg">b = 10cm, h = 12cm</p>
                     <br>
-                    <li>Rectangle &nbsp; &nbsp; <span id="rectangle-value">125.6</span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <button id="parallelogram-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                </div>
+                <!-- Area Calculation -->
+                <div id="area-calculation-container" class="border-2 p-8 rounded-md">
+                    <h4 class="text-2xl font-medium mb-4 underline">Area Calculation</h4>
+                    <ol id="list-container" class="list-decimal text-left">
+                    </ol>
+                </div>
+                <!-- Rhombus -->
+                <div class="border-2 p-8 rounded-md ">
+                    <img src="images/rhombus.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Rhombus</h4>
+                    <p class="text-md">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                    <p class="mt-2 text-lg">d<sub>1</sub>=16cm &nbsp; d<sub>2</sub>=8cm</p>
                     <br>
-                    <li>Parallelogram &nbsp; <span id="parallelogram-value">? </span>cm<sup>2</sup> &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <button id="rhombus-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                </div>
+                <!-- Pentagon -->
+                <div class="border-2 p-8 rounded-md ">
+                    <img src="images/pentagon.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Pentagon</h4>
+                    <p class="text-md">Area (A) = 0.5 X p X b</p>
+                    <p class="mt-2 text-lg">p = 6cm, b = 10cm</p>
                     <br>
-                    <li>Rhombus &nbsp; &nbsp; <span id="rhombus-value">? </span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
+                    <button id="pentagon-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                </div>
+                <!-- Ellipse -->
+                <div class="border-2 p-8 rounded-md ">
+                    <img src="images/ellipse.png" class="mb-4 mx-auto">
+                    <h4 class="text-2xl font-medium mb-2">Ellipse</h4>
+                    <p class="text-md">Area (A) = &#960;ab</p>
+                    <p class="mt-2 text-lg">a=10cm, b=4cm</p>
                     <br>
-                    <li>Pentagon &nbsp; &nbsp; <span id="pentagon-value">? </span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
-                    <br>
-                    <li>Ellipse &nbsp; &nbsp; <span id="ellipse-value">? </span>cm<sup>2</sup>&nbsp; &nbsp;<button class="bg-sky-600 hover:bg-sky-700 px-2 text-white rounded-sm">Convert to m<sup>2</sup></button></li>
-                </ol>
-            </div>
-        <!-- Rhombus -->
-        <div class="border-2 p-8 rounded-md ">
-            <img src="images/rhombus.png" class="mb-4 mx-auto">
-            <h4 class="text-2xl font-medium mb-2">Rhombus</h4>
-            <p class="text-md">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
-            <p class="mt-2 text-lg">d<sub>1</sub>=16cm &nbsp; d<sub>2</sub>=8cm</p>
-            <br>
-            <button id="rhombus-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-        </div>
-        <!-- Pentagon -->
-        <div class="border-2 p-8 rounded-md ">
-            <img src="images/pentagon.png" class="mb-4 mx-auto">
-            <h4 class="text-2xl font-medium mb-2">Pentagon</h4>
-            <p class="text-md">Area (A) = 0.5 X p X b</p>
-            <p class="mt-2 text-lg">p = 6cm, b = 10cm</p>
-            <br>
-            <button id="pentagon-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-        </div>
-        <!-- Ellipse -->
-        <div class="border-2 p-8 rounded-md ">
-            <img src="images/ellipse.png" class="mb-4 mx-auto">
-            <h4 class="text-2xl font-medium mb-2">Ellipse</h4>
-            <p class="text-md">Area (A) = &#960;ab</p>
-            <p class="mt-2 text-lg">a=10cm, b=4cm</p>
-            <br>
-            <button id="ellipse-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
-        </div>
-    </section>
+                    <button id="ellipse-calculate-button"
+                        class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
+                </div>
+        </section>
     </main>
     <script src="js/random-color.js"></script>
+    <script src="js/area-container.js"></script>
     <script src="js/calculation.js"></script>
+    
 </body>
+
 </html>

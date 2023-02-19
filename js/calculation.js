@@ -3,7 +3,18 @@ function getInputFieldValueById(inputFieldId) {
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     inputField.value = '';
-    return inputFieldValue;
+    if(isNaN(inputFieldValue)){
+        alert('You forgot to enter the number. Please enter your number first.');
+    }
+    else if(inputFieldValue < 0){
+        alert('Area cannot be negative. Please enter a positive number.')
+    }
+    else if(inputFieldValue === 0){
+        alert('Area cannot be zero. Please enter a positive number.')
+    }
+    else {
+        return inputFieldValue;
+    }
 }
 
 
@@ -21,7 +32,7 @@ document.getElementById('triangle-calculate-button').addEventListener('click', f
     const triangleArea = 0.5 * userWidthInput * userHeightInput;
 
     const updatedTriangleValue = document.getElementById('triangle-value');
-    updatedTriangleValue.innerText = triangleArea;
+    updatedTriangleValue.innerText = triangleArea.toFixed(2);
 
     setTextElementValueById('update-b', userWidthInput);
     setTextElementValueById('update-h', userHeightInput);
@@ -37,22 +48,7 @@ document.getElementById('rectangle-calculate-button').addEventListener('click', 
     const rectangleArea = userWidthInput * userHeightInput;
 
     const updatedRectangleValue = document.getElementById('rectangle-value');
-    updatedRectangleValue.innerText = rectangleArea;
-
-    setTextElementValueById('update-w', userWidthInput);
-    setTextElementValueById('update-l', userHeightInput);
-});
-
-
-document.getElementById('rectangle-calculate-button').addEventListener('click', function () {
-    const userWidthInput = getInputFieldValueById('user-input-w');
-
-    const userHeightInput = getInputFieldValueById('user-input-l');
-
-    const rectangleArea = userWidthInput * userHeightInput;
-
-    const updatedRectangleValue = document.getElementById('rectangle-value');
-    updatedRectangleValue.innerText = rectangleArea;
+    updatedRectangleValue.innerText = rectangleArea.toFixed(2);
 
     setTextElementValueById('update-w', userWidthInput);
     setTextElementValueById('update-l', userHeightInput);
