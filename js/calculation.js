@@ -1,31 +1,44 @@
-document.getElementById('triangle-calculate-button').addEventListener('click', function(){
-    const userWidthInputField = document.getElementById('user-input-b');
-    const userWidthInput = userWidthInputField.value;
+function getInputFieldValueById(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId);
+    const inputFieldValueString = inputField.value;
+    const inputFieldValue = parseFloat(inputFieldValueString);
+    inputField.value = '';
+    return inputFieldValue;
+}
 
-    const userHeightInputField = document.getElementById('user-input-h');
-    const userHeightInput = userHeightInputField.value;
+
+function setTextElementValueById(elementId, newValue){
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
+}
+
+
+document.getElementById('triangle-calculate-button').addEventListener('click', function () {
+    const userWidthInput = getInputFieldValueById('user-input-b');
+
+    const userHeightInput = getInputFieldValueById('user-input-h');
 
     const triangleArea = 0.5 * userWidthInput * userHeightInput;
 
     const updatedTriangleValue = document.getElementById('triangle-value');
     updatedTriangleValue.innerText = triangleArea;
 
-    userHeightInputField.value = '';
-    userWidthInputField.value = '';
+    setTextElementValueById('update-b', userWidthInput);
+    setTextElementValueById('update-h', userHeightInput);
+
 });
 
-document.getElementById('rectangle-calculate-button').addEventListener('click', function(){
-    const userWidthInputField = document.getElementById('user-input-w');
-    const userWidthInput = userWidthInputField.value;
 
-    const userHeightInputField = document.getElementById('user-input-l');
-    const userHeightInput = userHeightInputField.value;
+document.getElementById('rectangle-calculate-button').addEventListener('click', function () {
+    const userWidthInput = getInputFieldValueById('user-input-w');
+
+    const userHeightInput = getInputFieldValueById('user-input-l');
 
     const rectangleArea = userWidthInput * userHeightInput;
 
     const updatedRectangleValue = document.getElementById('rectangle-value');
     updatedRectangleValue.innerText = rectangleArea;
-    
-    userHeightInputField.value = '';
-    userWidthInputField.value = '';
+
+    setTextElementValueById('update-w', userWidthInput);
+    setTextElementValueById('update-l', userHeightInput);
 });

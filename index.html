@@ -23,10 +23,10 @@
         <section>
         <div class="grid grid-cols-4 gap-4 mx-auto text-black p-6 text-center">
             <!--Triangle-->
-            <div id="random" class="border-2 p-8 rounded-md ">
+            <div id="random" class="randomcolor border-2 p-8 rounded-md ">
                 <img src="images/triangle.png" class="mb-4 mx-auto">
                 <h4 class="text-2xl font-medium mb-2">Triangle</h4>
-                <p class="text-md">Area (A) = 0.5 X b X h</p>
+                <p class="text-md">Area (A) = 0.5 X <span id="update-b">b</span> X <span id="update-h">h</span></p>
                 <div class="flex gap-2 mt-2">
                     <input id="user-input-b" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="b">
                 <p>cm</p>
@@ -36,10 +36,10 @@
                 <button id="triangle-calculate-button" class="bg-sky-600 hover:bg-sky-700 px-8 py-2 mt-8 text-white font-medium rounded-lg w-full">Calculate</button>
             </div>
             <!--Rectangle-->
-            <div id="random-2" class="border-2 p-8 rounded-md ">
+            <div id="random-2" class="randomcolor border-2 p-8 rounded-md ">
                 <img src="images/rectangle.png" class="mb-4 mx-auto">
                 <h4 class="text-2xl font-medium mb-2">Rectangle</h4>
-                <p class="text-md">Area (A) = w X l</p>
+                <p class="text-md">Area (A) = <span id="update-w">w</span> X <span id="update-l">l</span></p>
                 <div class="flex gap-2 mt-2">
                     <input id="user-input-w" class="bg-gray-200 rounded-md text-black px-5 w-1/2" type="number" name="" id="" placeholder="w">
                 <p>cm</p>
