@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&As</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-sky-100 rounded-sm mx-10 my-8 px-5 py-3">
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Interactive</h1>
+                <p class="text-lg">Geometry Genius</p>
+            </div>
+            <div>
+                <button class="bg-sky-600  hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg"><a
+                        href="index.html">Return to Main Website</a></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="grid grid-cols-4 gap-4 mx-auto text-black p-6">
+                <div class="border-2 p-8 rounded-md ">
+                    <h4 class="text-2xl font-medium mb-2"><span class="bg-sky-400 px-2">1.</span> What is DOM and what is the purpose of DOM?</h4>
+                    <p class="text-md">DOM stands for Document Object Model. DOM is a structured way for accessing HTML Documents and making it interactive. The structure, style, and content of a document can be changed using DOM. It is an object-oriented way of showcasing a website, where we can use Javascript to modify the necessary things.</p>
+                </div>
+                <div class="border-2 p-8 rounded-md ">
+                    <h4 class="text-2xl font-medium mb-2"><span class="bg-sky-400 px-2">2.</span> How will you select HTML elements using DOM? Name the DOM methods.</h4>
+                    <p class="text-md">We can select HTML elements in 5 ways using DOM. They are -
+                        <ol class="list-decimal px-4 mt-2">
+                            <li><b>getElementsbyTagName()</b>: It is used to select the HTML element using their tags (e.g. h1, li, etc.)</li>
+                            <li><b>getElementbyId()</b>: It is used to select the HTML element using the specific ID. Each element has an unique ID, so a unique item can be called using this.</li>
+                            <li><b>getElementsbyClassNames()</b>: Elements can be selected using class names using this method. Generally, it is used to select multiple items at once.</li>
+                            <li><b>querySelectorAll()</b>: It is used to select specific HTML tags all at once. (e.g. list item of specific classes can be selected altogether). It returns a Nodelist.</li>
+                            <li><b>querySelector()</b>: This tag is used to return the first one. No matter how much items is selected, it'll always return the first item. It returns the first item of the Nodelist.</li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="border-2 p-8 rounded-md ">
+                    <h4 class="text-2xl font-medium mb-2"><span class="bg-sky-400 px-2">3.</span> What is event bubble?</h4>
+                    <p class="text-md">When an element of the DOM receives an event, the event propagates to its parent elements. Event bubble works from inward to outward, where it can keep finding its root element. We can use stopPropagation() command to stop event bubble.</p>
+                </div>
+                <div class="border-2 p-8 rounded-md ">
+                    <h4 class="text-2xl font-medium mb-2"><span class="bg-sky-400 px-2">4.</span> What is a callback function and why will you use it?</h4>
+                    <p class="text-md">A callback function is a function that is passed into another function as an argument. After a function is executed, the callback function is executed with that.<br>
+                    We use callback function to handle the functions better. When we need to execute one function only after the execution of another function is completed, we use callback function.</p>
+                </div>
+            </div>
+</body>
+
+</html>
